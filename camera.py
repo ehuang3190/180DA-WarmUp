@@ -2,7 +2,7 @@
 #https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
 #https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
 #https://stackoverflow.com/questions/44588279/find-and-draw-the-largest-contour-in-opencv-on-a-specific-color-python
-
+# https://code.likeagirl.io/finding-dominant-colour-on-an-image-b4e075f98097
 '''
 Improvements:
 add bounding box of largest contour
@@ -11,6 +11,7 @@ change s and v min to 30
 '''
 import numpy as np
 import cv2 as cv
+
 
 cap = cv.VideoCapture(0)
 
@@ -34,6 +35,7 @@ while(True):
     print(area)
     x,y,w,h = cv.boundingRect(cnt)
     cv.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
+
     cv.imshow('frame',frame)
     cv.imshow('mask',mask)
     cv.imshow('res',res)
