@@ -3,12 +3,14 @@
 #https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
 #https://stackoverflow.com/questions/44588279/find-and-draw-the-largest-contour-in-opencv-on-a-specific-color-python
 # https://code.likeagirl.io/finding-dominant-colour-on-an-image-b4e075f98097
+
 '''
 Improvements:
 add bounding box of largest contour
 add gaussian blur
 change s and v min to 30
 '''
+
 import numpy as np
 import cv2 as cv
 
